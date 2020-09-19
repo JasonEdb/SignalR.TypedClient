@@ -77,7 +77,7 @@ namespace SignalR.TypedClient
             }
         }
 
-        public TypedHubClient(HubConnection hubConnection)
+        internal TypedHubClient(HubConnection hubConnection)
         {
             _hubConnection = hubConnection;
             var proxyGen = new ProxyGenerator();
