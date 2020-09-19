@@ -23,13 +23,18 @@ namespace TestClient
             var hub = builder
                 .WithUrl("http://localhost:5000/echo")
                 .WithAutomaticReconnect()
+                // New extension method
                 .Build<IEchoHub>();
 
+            // Register a strongly typed class to capture callbacks
             var unregister = hub.RegisterCallbacks(new MyClientCallbacks());
+            
+            // Connect
             await hub.StartAsync();
+            
+            // Invoke methods via an interface
             var message = await hub.Invoke.Echo("Some message");
             Console.WriteLine($"Result: {message}");
-
         }
     }
 
@@ -42,5 +47,4 @@ namespace TestClient
         }
     }
 }
-
 ```
