@@ -48,3 +48,6 @@ namespace TestClient
     }
 }
 ```
+
+**Output:**
+![Console Output](images/ConsoleOutput.png)
