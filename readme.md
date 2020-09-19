@@ -1,6 +1,8 @@
 # SignalR.TypedClient
 A proof of concept for strongly typed SignalR Clients using `Castle.DynamicProxy`
 
+**Note:** This does not currently respect `Hub` attributes.
+
 ![Intellisense on hub client](images/StronglyTyped.png)
 
 ## Client Code
